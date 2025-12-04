@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon.ico"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link href="./output.css" rel="stylesheet" />
+    <script type="module" src="/main.js"></script>
+  </head>
+
+  <body
+    class="bg-blue-700 md:flex md:justify-center md:items-center min-h-screen md:m-4"
+  >
+    <main>
+      <!-- Sign-up form start -->
+      <section
+        class="sign-up-form min-h-screen bg-white md:p-4 md:rounded-3xl md:min-h-0 lg:max-w-5xl lg:w-full lg:rounded-4xl lg:flex lg:flex-row-reverse lg:items-center lg:p-4"
+      >
+        <picture>
+          <!-- Desktop -->
+          <source
+            srcset="/assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 1024px)"
+          />
+
+          <!-- Tablet -->
+          <source
+            srcset="/assets/images/illustration-sign-up-tablet.svg"
+            media="(min-width: 768px)"
+          />
+
+          <!-- Mobile (fallback) -->
+          <img
+            src="/assets/images/illustration-sign-up-mobile.svg"
+            alt="Sign up illustration"
+            width="375"
+            height="284"
+            class="w-full"
+          />
+        </picture>
+
+        <div class="mt-8 px-8 text-blue-800">
+          <h1 class="text-4xl font-bold lg:text-6xl">Stay updated!</h1>
+          <p class="mt-4">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <ul class="mt-4 flex flex-col gap-y-3">
+            <li class="flex items-center gap-x-4">
+              <img
+                src="/assets/images/icon-list.svg"
+                alt=""
+                width="21"
+                height="21"
+              />
+              Product discovery and building what matters
+            </li>
+            <li class="flex items-center gap-x-4">
+              <img
+                src="/assets/images/icon-list.svg"
+                alt=""
+                width="21"
+                height="21"
+              />
+              Measuring to ensure updates are a success
+            </li>
+            <li class="flex items-center gap-x-4">
+              <img
+                src="/assets/images/icon-list.svg"
+                alt=""
+                width="21"
+                height="21"
+              />
+              And much more!
+            </li>
+          </ul>
+
+          <form class="mt-8 flex flex-col" novalidate>
+            <div class="flex justify-between">
+              <label for="email" class="font-bold text-sm">Email address</label>
+              <span class="text-xs text-red font-bold"></span>
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+              class="border border-grey p-4 mt-2 rounded-lg pl-6 cursor-pointer focus:outline-none focus:border-blue-800"
+            />
+
+            <button
+              type="submit"
+              class="my-8 bg-blue-800 font-bold w-full text-white p-4 cursor-pointer rounded-lg shadow-2xl hover:bg-[linear-gradient(to_right,#ff5474,#ff6841)] hover:shadow-[0_0_15px_#ff5474]"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Success message start -->
+      <section
+        class="success-message hidden w-full min-h-screen px-8 py-10 bg-white flex flex-col gap-8 md:rounded-4xl md:max-w-md md:mx-auto md:min-h-0 md:px-10"
+      >
+        <div class="flex flex-col gap-6 mt-10 text-blue-800">
+          <div>
+            <img
+              src="/assets/images/icon-success.svg"
+              alt=""
+              width="64"
+              height="64"
+            />
+          </div>
+
+          <h1 class="text-4xl font-bold md:text-5xl">
+            Thanks for<br />subscribing!
+          </h1>
+
+          <p>
+            A confirmation email has been sent to
+            <span class="span-email font-bold"></span>. Please open it and click
+            the button inside to confirm your subscription.
+          </p>
+        </div>
+
+        <button
+          class="mt-auto w-full bg-blue-800 text-white py-4 rounded-xl cursor-pointer hover:bg-[linear-gradient(to_right,#ff5474,#ff6841)] hover:shadow-[0_0_15px_#ff5474]"
+        >
+          Dismiss message
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
